@@ -1,0 +1,16 @@
+Jane Doe
+San Francisco, USA
+jane.doe@acme.com | (415) 555-2671 | https://github.com/janedoe
+
+Summary
+Senior software engineer with 8 years of experience building distributed systems.
+
+Experience
+Senior Software Engineer | Acme Corp | April 2021 - Present
+Software Engineer | Initech | January 2018 - March 2021
+
+Education
+B.S., Computer Science - UC Berkeley - 2017
+
+Skills
+Python, JavaScript, TypeScript, React, Node.js, AWS, PostgreSQL, Docker, Kubernetes, Terraform

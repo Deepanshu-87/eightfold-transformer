@@ -1,0 +1,114 @@
+{
+  "candidates": [
+    {
+      "id": "ats-001",
+      "personal": {
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "emailAddr": "j.doe@acme.com",
+        "mobile": "+1-415-555-2671",
+        "country": "US",
+        "city": "San Francisco"
+      },
+      "professional": {
+        "headline": "Senior Software Engineer at Acme",
+        "yearsOfExp": 8,
+        "positions": [
+          {"org": "Acme Corp", "role": "Senior Software Engineer", "from": "2021-04", "to": "present", "desc": "Built data ingestion platform."},
+          {"org": "Initech", "role": "Software Engineer", "from": "Jan 2018", "to": "March 2021", "desc": "Backend services."}
+        ]
+      },
+      "education": [
+        {"school": "UC Berkeley", "degree": "B.S.", "major": "Computer Science", "graduationYear": 2017}
+      ],
+      "skillsList": ["Python", "JS", "React", "AWS", "Postgres"],
+      "social": {"linkedinUrl": "https://linkedin.com/in/janedoe", "githubUrl": "https://github.com/janedoe"}
+    },
+    {
+      "id": "ats-002",
+      "personal": {
+        "firstName": "John",
+        "lastName": "Smith",
+        "emailAddr": "JOHN.SMITH@example.com",
+        "mobile": "0091 98 2055 1234",
+        "country": "India",
+        "city": "Bangalore"
+      },
+      "professional": {
+        "headline": "Staff Engineer",
+        "yearsOfExp": 12,
+        "positions": [
+          {"org": "Infosys", "role": "Staff Engineer", "from": "2019/06", "to": "now"},
+          {"org": "Wipro", "role": "Senior Engineer", "from": "2015", "to": "2019"}
+        ]
+      },
+      "education": [{"school": "IIT Bombay", "degree": "B.Tech", "major": "CS", "graduationYear": 2011}],
+      "skillsList": ["Java", "Spring", "K8s", "AWS"],
+      "social": {"linkedinUrl": "https://linkedin.com/in/johnsmith"}
+    },
+    {
+      "id": "ats-003",
+      "personal": {
+        "firstName": "Priya",
+        "lastName": "Patel",
+        "emailAddr": "priya@datapeak.io",
+        "mobile": "415 555 0188",
+        "country": "USA",
+        "city": "Mountain View"
+      },
+      "professional": {
+        "headline": "Data Scientist",
+        "yearsOfExp": 5,
+        "positions": [
+          {"org": "DataPeak", "role": "Data Scientist", "from": "2022-08", "to": "present"}
+        ]
+      },
+      "education": [{"school": "Stanford", "degree": "MS", "major": "Statistics", "graduationYear": 2020}],
+      "skillsList": ["python", "pandas", "PyTorch", "TensorFlow", "scikit-learn"],
+      "social": {}
+    },
+    {
+      "id": "ats-004",
+      "personal": {
+        "firstName": "Marcus",
+        "lastName": "Lee",
+        "emailAddr": "marcus.lee@photonics.com",
+        "mobile": "+44 20 7946 0958",
+        "country": "UK"
+      },
+      "professional": {
+        "headline": "Engineering Manager",
+        "yearsOfExp": 11,
+        "positions": [{"org": "Photonics Ltd", "role": "Engineering Manager", "from": "2020-01"}]
+      },
+      "education": [{"school": "Imperial College London", "degree": "MEng", "major": "Computing", "graduationYear": 2014}],
+      "skillsList": ["Go", "Kubernetes", "Terraform", "GCP"]
+    },
+    {
+      "id": "ats-005",
+      "personal": {
+        "fullName": "Hiroshi Sato",
+        "emails": ["hiroshi@yamatech.jp"],
+        "phones": ["+81 90 1234 5678"],
+        "country": "Japan",
+        "city": "Osaka"
+      },
+      "professional": {
+        "headline": "ML Engineer",
+        "positions": [{"org": "YamaTech", "role": "ML Engineer", "from": "2021-09"}]
+      },
+      "skillsList": ["Python", "PyTorch", "NLP", "Kubernetes"]
+    },
+    {
+      "id": "ats-006",
+      "personal": {
+        "firstName": "Garbage",
+        "lastName": "",
+        "emailAddr": "not-an-email",
+        "mobile": "abc",
+        "country": "Atlantis"
+      },
+      "skillsList": []
+    }
+  ]
+}

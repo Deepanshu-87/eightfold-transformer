@@ -1,0 +1,13 @@
+Hiroshi Sato
+Osaka, Japan
+hiroshi@yamatech.jp | +81 90 1234 5678
+
+Experience
+ML Engineer | YamaTech | September 2021 - Present
+Research Assistant | University of Tokyo | April 2019 - August 2021
+
+Education
+M.Eng, Computer Science - University of Tokyo - 2021
+
+Skills
+Python, PyTorch, TensorFlow, NLP, Machine Learning, Kubernetes, Docker, GCP

@@ -1,0 +1,1852 @@
+{
+  "count": 13,
+  "records": [
+    {
+      "candidate_id": "j.doe@acme.com",
+      "full_name": "Jane Doe",
+      "emails": [
+        "jane.doe@acme.com",
+        "j.doe@acme.com"
+      ],
+      "phones": [
+        "+14155552671"
+      ],
+      "location": {
+        "city": "San Francisco",
+        "region": "CA",
+        "country": "US"
+      },
+      "links": {
+        "linkedin": "https://linkedin.com/in/janedoe",
+        "github": "https://github.com/janedoe",
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "Senior Software Engineer at Acme",
+      "years_experience": 8.0,
+      "skills": [
+        {
+          "name": "AWS",
+          "confidence": 0.99,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "resume",
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "JavaScript",
+          "confidence": 0.99,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "Python",
+          "confidence": 0.99,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "resume",
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "React",
+          "confidence": 0.99,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "Terraform",
+          "confidence": 0.97975,
+          "sources": [
+            "recruiter_csv",
+            "resume",
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "PostgreSQL",
+          "confidence": 0.94,
+          "sources": [
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "Docker",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "Kubernetes",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "Node.js",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "TypeScript",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Acme Corp",
+          "title": "Senior Software Engineer",
+          "start": null,
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "Acme Corp",
+          "title": "Senior SWE",
+          "start": null,
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "Acme Corp",
+          "title": "Senior Software Engineer",
+          "start": "2021-04",
+          "end": null,
+          "summary": "Built data ingestion platform."
+        },
+        {
+          "company": "Initech",
+          "title": "Software Engineer",
+          "start": "2018-01",
+          "end": "2021-03",
+          "summary": "Backend services."
+        }
+      ],
+      "education": [
+        {
+          "institution": "UC Berkeley",
+          "degree": "B.S.",
+          "field": "Computer Science",
+          "end_year": 2017
+        }
+      ],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "years_experience",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_notes",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "resume",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_notes",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "resume",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.region",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.linkedin",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.github",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        },
+        {
+          "field": "education",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.706
+    },
+    {
+      "candidate_id": "john.smith@example.com",
+      "full_name": "John Smith",
+      "emails": [
+        "john.smith@example.com"
+      ],
+      "phones": [
+        "+919820551234"
+      ],
+      "location": {
+        "city": "Bangalore",
+        "region": "Karnataka",
+        "country": "IN"
+      },
+      "links": {
+        "linkedin": "https://linkedin.com/in/johnsmith",
+        "github": "https://github.com/jsmith",
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "Staff Engineer",
+      "years_experience": 12.0,
+      "skills": [
+        {
+          "name": "AWS",
+          "confidence": 0.97,
+          "sources": [
+            "recruiter_csv",
+            "ats_json"
+          ]
+        },
+        {
+          "name": "Java",
+          "confidence": 0.97,
+          "sources": [
+            "recruiter_csv",
+            "ats_json"
+          ]
+        },
+        {
+          "name": "Kubernetes",
+          "confidence": 0.97,
+          "sources": [
+            "recruiter_csv",
+            "ats_json"
+          ]
+        },
+        {
+          "name": "Spring Boot",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Spring",
+          "confidence": 0.8,
+          "sources": [
+            "ats_json"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Infosys",
+          "title": "Staff Engineer",
+          "start": null,
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "Infosys",
+          "title": "Staff Engineer",
+          "start": "2019-06",
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "Wipro",
+          "title": "Senior Engineer",
+          "start": "2015-01",
+          "end": "2019-01",
+          "summary": null
+        }
+      ],
+      "education": [
+        {
+          "institution": "IIT Bombay",
+          "degree": "B.Tech",
+          "field": "CS",
+          "end_year": 2011
+        }
+      ],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "years_experience",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.region",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.linkedin",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.github",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        },
+        {
+          "field": "education",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.694
+    },
+    {
+      "candidate_id": "priya@datapeak.io",
+      "full_name": "Priya Patel",
+      "emails": [
+        "priya@datapeak.io"
+      ],
+      "phones": [
+        "+14155550188"
+      ],
+      "location": {
+        "city": "Mountain View",
+        "region": "CA",
+        "country": "US"
+      },
+      "links": {
+        "linkedin": "https://linkedin.com/in/priyapatel",
+        "github": null,
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "Data Scientist",
+      "years_experience": 5.0,
+      "skills": [
+        {
+          "name": "pandas",
+          "confidence": 0.99,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "Python",
+          "confidence": 0.99,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "scikit-learn",
+          "confidence": 0.99,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "TensorFlow",
+          "confidence": 0.99,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "Machine Learning",
+          "confidence": 0.955,
+          "sources": [
+            "recruiter_csv",
+            "resume"
+          ]
+        },
+        {
+          "name": "PyTorch",
+          "confidence": 0.94,
+          "sources": [
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "AWS",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "NLP",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "NumPy",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "SQL",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "DataPeak",
+          "title": "Data Scientist",
+          "start": null,
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "DataPeak",
+          "title": "Data Scientist",
+          "start": "2022-08",
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "Stanford AI Lab",
+          "title": "ML Intern",
+          "start": "2019-06",
+          "end": "2020-05",
+          "summary": null
+        }
+      ],
+      "education": [
+        {
+          "institution": "Stanford",
+          "degree": "MS",
+          "field": "Statistics",
+          "end_year": 2020
+        },
+        {
+          "institution": "Stanford University",
+          "degree": "M.S.",
+          "field": "Statistics",
+          "end_year": 2020
+        },
+        {
+          "institution": "University of Pune",
+          "degree": "B.Sc",
+          "field": "Mathematics",
+          "end_year": 2018
+        }
+      ],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "years_experience",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "resume",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "resume",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.region",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.linkedin",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        },
+        {
+          "field": "education",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.702
+    },
+    {
+      "candidate_id": "marcus.lee@photonics.com",
+      "full_name": "Marcus Lee",
+      "emails": [
+        "marcus.lee@photonics.com"
+      ],
+      "phones": [
+        "+442079460958"
+      ],
+      "location": {
+        "city": "London",
+        "region": null,
+        "country": "UK"
+      },
+      "links": {
+        "linkedin": "https://linkedin.com/in/marcuslee",
+        "github": "https://github.com/marcusl",
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "Engineering Manager",
+      "years_experience": 11.0,
+      "skills": [
+        {
+          "name": "GCP",
+          "confidence": 0.9865,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "Go",
+          "confidence": 0.9865,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "Kubernetes",
+          "confidence": 0.9865,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "Terraform",
+          "confidence": 0.9865,
+          "sources": [
+            "recruiter_csv",
+            "ats_json",
+            "recruiter_notes"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Photonics Ltd",
+          "title": "Engineering Manager",
+          "start": null,
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "Photonics Ltd",
+          "title": "Engineering Manager",
+          "start": "2020-01",
+          "end": null,
+          "summary": null
+        }
+      ],
+      "education": [
+        {
+          "institution": "Imperial College London",
+          "degree": "MEng",
+          "field": "Computing",
+          "end_year": 2014
+        }
+      ],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "years_experience",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_notes",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.linkedin",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.github",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        },
+        {
+          "field": "education",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.699
+    },
+    {
+      "candidate_id": "sara.k@mintly.co",
+      "full_name": "Sara Khan",
+      "emails": [
+        "sara.k@mintly.co"
+      ],
+      "phones": [
+        "+12125559821"
+      ],
+      "location": {
+        "city": "New York",
+        "region": "NY",
+        "country": "US"
+      },
+      "links": {
+        "linkedin": "https://linkedin.com/in/sarak",
+        "github": null,
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "Backend Engineer",
+      "years_experience": null,
+      "skills": [
+        {
+          "name": "GraphQL",
+          "confidence": 0.955,
+          "sources": [
+            "recruiter_csv",
+            "resume"
+          ]
+        },
+        {
+          "name": "Node.js",
+          "confidence": 0.955,
+          "sources": [
+            "recruiter_csv",
+            "resume"
+          ]
+        },
+        {
+          "name": "PostgreSQL",
+          "confidence": 0.955,
+          "sources": [
+            "recruiter_csv",
+            "resume"
+          ]
+        },
+        {
+          "name": "Redis",
+          "confidence": 0.955,
+          "sources": [
+            "recruiter_csv",
+            "resume"
+          ]
+        },
+        {
+          "name": "TypeScript",
+          "confidence": 0.955,
+          "sources": [
+            "recruiter_csv",
+            "resume"
+          ]
+        },
+        {
+          "name": "AWS",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "Docker",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "JavaScript",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "Kafka",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "REST",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Mintly",
+          "title": "Backend Engineer",
+          "start": null,
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "Squareloop",
+          "title": "Software Engineer",
+          "start": "2017-06",
+          "end": "2020-08",
+          "summary": null
+        }
+      ],
+      "education": [
+        {
+          "institution": "NYU Tandon",
+          "degree": "B.E.",
+          "field": "Computer Engineering",
+          "end_year": 2017
+        }
+      ],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "resume",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "resume",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.region",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.linkedin",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        },
+        {
+          "field": "education",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.665
+    },
+    {
+      "candidate_id": "diego@nuevasol.es",
+      "full_name": "Diego Ramirez",
+      "emails": [
+        "diego@nuevasol.es"
+      ],
+      "phones": [
+        "+34612345678"
+      ],
+      "location": {
+        "city": "Madrid",
+        "region": null,
+        "country": "ES"
+      },
+      "links": {
+        "linkedin": null,
+        "github": "https://github.com/dramirez",
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "Frontend Engineer",
+      "years_experience": null,
+      "skills": [
+        {
+          "name": "CSS",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "React",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "TypeScript",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Vue.js",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "NuevaSol",
+          "title": "Frontend Engineer",
+          "start": null,
+          "end": null,
+          "summary": null
+        }
+      ],
+      "education": [],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.github",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.621
+    },
+    {
+      "candidate_id": "olivia.brown@finhive.com",
+      "full_name": "Olivia Brown",
+      "emails": [
+        "olivia.brown@finhive.com",
+        "oliviab@gmail.com"
+      ],
+      "phones": [
+        "+13125557700"
+      ],
+      "location": {
+        "city": "Chicago",
+        "region": "IL",
+        "country": "US"
+      },
+      "links": {
+        "linkedin": "https://linkedin.com/in/oliviabrown",
+        "github": null,
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "Senior Data Engineer",
+      "years_experience": null,
+      "skills": [
+        {
+          "name": "Apache Spark",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "AWS",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Kafka",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Python",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "SQL",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "FinHive",
+          "title": "Senior Data Engineer",
+          "start": null,
+          "end": null,
+          "summary": null
+        }
+      ],
+      "education": [],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.region",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.linkedin",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.621
+    },
+    {
+      "candidate_id": "yuki.tanaka@robonova.jp",
+      "full_name": "Yuki Tanaka",
+      "emails": [
+        "yuki.tanaka@robonova.jp"
+      ],
+      "phones": [
+        "+81312345678"
+      ],
+      "location": {
+        "city": "Tokyo",
+        "region": null,
+        "country": "JP"
+      },
+      "links": {
+        "linkedin": null,
+        "github": "https://github.com/yukitanaka",
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "Robotics Engineer",
+      "years_experience": null,
+      "skills": [
+        {
+          "name": "C++",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Linux",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Python",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "ROS",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "RoboNova",
+          "title": "Robotics Engineer",
+          "start": null,
+          "end": null,
+          "summary": null
+        }
+      ],
+      "education": [],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.github",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.621
+    },
+    {
+      "candidate_id": "anita.verma@stackline.com",
+      "full_name": "Anita Verma",
+      "emails": [
+        "anita.verma@stackline.com"
+      ],
+      "phones": [
+        "+19826551122"
+      ],
+      "location": {
+        "city": "Pune",
+        "region": "Maharashtra",
+        "country": "IN"
+      },
+      "links": {
+        "linkedin": "https://linkedin.com/in/anitaverma",
+        "github": null,
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "SDE 2",
+      "years_experience": null,
+      "skills": [
+        {
+          "name": "AWS",
+          "confidence": 0.9325,
+          "sources": [
+            "recruiter_csv",
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "Java",
+          "confidence": 0.9325,
+          "sources": [
+            "recruiter_csv",
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "Microservices",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Spring",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Kubernetes",
+          "confidence": 0.55,
+          "sources": [
+            "recruiter_notes"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "Stackline",
+          "title": "SDE 2",
+          "start": null,
+          "end": null,
+          "summary": null
+        }
+      ],
+      "education": [],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_notes",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.region",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.linkedin",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.632
+    },
+    {
+      "candidate_id": "liam@brewtech.ie",
+      "full_name": "Liam O'Connor",
+      "emails": [
+        "liam@brewtech.ie"
+      ],
+      "phones": [
+        "+35315550150"
+      ],
+      "location": {
+        "city": "Dublin",
+        "region": null,
+        "country": "IE"
+      },
+      "links": {
+        "linkedin": null,
+        "github": "https://github.com/liamoc",
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "Platform Engineer",
+      "years_experience": null,
+      "skills": [
+        {
+          "name": "AWS",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Docker",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Kubernetes",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        },
+        {
+          "name": "Rust",
+          "confidence": 0.85,
+          "sources": [
+            "recruiter_csv"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "BrewTech",
+          "title": "Platform Engineer",
+          "start": null,
+          "end": null,
+          "summary": null
+        }
+      ],
+      "education": [],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "recruiter_csv",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "links.github",
+          "source": "recruiter_csv",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.621
+    },
+    {
+      "candidate_id": "hiroshi@yamatech.jp",
+      "full_name": "Hiroshi Sato",
+      "emails": [
+        "hiroshi@yamatech.jp"
+      ],
+      "phones": [
+        "+819012345678"
+      ],
+      "location": {
+        "city": "Osaka",
+        "region": null,
+        "country": "JP"
+      },
+      "links": {
+        "linkedin": null,
+        "github": null,
+        "portfolio": null,
+        "other": []
+      },
+      "headline": "ML Engineer",
+      "years_experience": null,
+      "skills": [
+        {
+          "name": "Kubernetes",
+          "confidence": 0.94,
+          "sources": [
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "NLP",
+          "confidence": 0.94,
+          "sources": [
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "Python",
+          "confidence": 0.94,
+          "sources": [
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "PyTorch",
+          "confidence": 0.94,
+          "sources": [
+            "ats_json",
+            "resume"
+          ]
+        },
+        {
+          "name": "Docker",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "GCP",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "Machine Learning",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        },
+        {
+          "name": "TensorFlow",
+          "confidence": 0.7,
+          "sources": [
+            "resume"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "company": "YamaTech",
+          "title": "ML Engineer",
+          "start": "2021-09",
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "YamaTech",
+          "title": "ML Engineer",
+          "start": null,
+          "end": null,
+          "summary": null
+        },
+        {
+          "company": "University of Tokyo",
+          "title": "Research Assistant",
+          "start": "2019-04",
+          "end": "2021-08",
+          "summary": null
+        }
+      ],
+      "education": [
+        {
+          "institution": "University of Tokyo",
+          "degree": "M.Eng",
+          "field": "Computer Science",
+          "end_year": 2021
+        }
+      ],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "headline",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "emails",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "emails",
+          "source": "resume",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "ats_json",
+          "method": "union"
+        },
+        {
+          "field": "phones",
+          "source": "resume",
+          "method": "union"
+        },
+        {
+          "field": "location.city",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "location.country",
+          "source": "ats_json",
+          "method": "priority_winner"
+        },
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        },
+        {
+          "field": "experience",
+          "source": "merged",
+          "method": "dedup_union"
+        },
+        {
+          "field": "education",
+          "source": "merged",
+          "method": "dedup_union"
+        }
+      ],
+      "overall_confidence": 0.691
+    },
+    {
+      "candidate_id": "garbage",
+      "full_name": "Garbage",
+      "emails": [],
+      "phones": [],
+      "location": {
+        "city": null,
+        "region": null,
+        "country": null
+      },
+      "links": {
+        "linkedin": null,
+        "github": null,
+        "portfolio": null,
+        "other": []
+      },
+      "headline": null,
+      "years_experience": null,
+      "skills": [],
+      "experience": [],
+      "education": [],
+      "provenance": [
+        {
+          "field": "full_name",
+          "source": "ats_json",
+          "method": "priority_winner"
+        }
+      ],
+      "overall_confidence": 0.158
+    },
+    {
+      "candidate_id": "recruiter_notes:unknown_call",
+      "full_name": "",
+      "emails": [],
+      "phones": [],
+      "location": {
+        "city": null,
+        "region": null,
+        "country": null
+      },
+      "links": {
+        "linkedin": null,
+        "github": null,
+        "portfolio": null,
+        "other": []
+      },
+      "headline": null,
+      "years_experience": null,
+      "skills": [
+        {
+          "name": "GraphQL",
+          "confidence": 0.55,
+          "sources": [
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "React",
+          "confidence": 0.55,
+          "sources": [
+            "recruiter_notes"
+          ]
+        },
+        {
+          "name": "TypeScript",
+          "confidence": 0.55,
+          "sources": [
+            "recruiter_notes"
+          ]
+        }
+      ],
+      "experience": [],
+      "education": [],
+      "provenance": [
+        {
+          "field": "skills",
+          "source": "merged",
+          "method": "union_confidence_boost"
+        }
+      ],
+      "overall_confidence": 0.042
+    }
+  ],
+  "schema_errors": []
+}

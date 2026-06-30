@@ -1,0 +1,5 @@
+Candidate: Jane Doe
+Spoke to Jane on the 12th. She has strong Python and AWS experience. Mentioned
+some Terraform usage at Acme. Currently considering staff-level roles.
+Best contact: jane.doe@acme.com or (415) 555-2671.
+Open to remote within the US.

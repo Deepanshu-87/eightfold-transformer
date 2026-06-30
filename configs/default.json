@@ -1,0 +1,7 @@
+{
+  "_comment": "Empty config = use default canonical schema. The CLI runs without --config to emit the default schema. This file exists for documentation.",
+  "fields": [],
+  "include_provenance": true,
+  "include_confidence": true,
+  "on_missing": "null"
+}

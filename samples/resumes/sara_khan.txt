@@ -1,0 +1,16 @@
+Sara Khan
+New York, US
+sara.k@mintly.co | (212) 555-9821 | https://github.com/sarak
+
+Summary
+Backend engineer with deep experience in distributed APIs and database design.
+
+Experience
+Backend Engineer | Mintly | September 2020 - Present
+Software Engineer | Squareloop | June 2017 - August 2020
+
+Education
+B.E., Computer Engineering - NYU Tandon - 2017
+
+Skills
+Node.js, TypeScript, JavaScript, PostgreSQL, Redis, GraphQL, REST, Docker, AWS, Kafka

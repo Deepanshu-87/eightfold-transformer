@@ -1,0 +1,13 @@
+candidate_id,name,email,phone,current_company,title,city,region,country,linkedin,github,skills
+,Jane Doe,jane.doe@acme.com,(415) 555-2671,Acme Corp,Senior Software Engineer,San Francisco,CA,USA,https://linkedin.com/in/janedoe,https://github.com/janedoe,"Python, JavaScript, React, AWS"
+,John Smith,john.smith@example.com,+91-98-2055-1234,Infosys,Staff Engineer,Bengaluru,Karnataka,India,https://linkedin.com/in/johnsmith,https://github.com/jsmith,"Java, Spring Boot, Kubernetes, AWS"
+,Priya Patel,priya@datapeak.io,415.555.0188,DataPeak,Data Scientist,Mountain View,CA,USA,https://linkedin.com/in/priyapatel,,"python, pandas, ML, TensorFlow, sklearn"
+,Marcus Lee,marcus.lee@photonics.com,+44 20 7946 0958,Photonics Ltd,Engineering Manager,London,,United Kingdom,https://linkedin.com/in/marcuslee,https://github.com/marcusl,"Go, Kubernetes, Terraform, GCP"
+,Sara Khan,sara.k@mintly.co,(212) 555-9821,Mintly,Backend Engineer,New York,NY,US,https://linkedin.com/in/sarak,,"Node.js, TypeScript, PostgreSQL, Redis, GraphQL"
+,Diego Ramirez,diego@nuevasol.es,+34 612 345 678,NuevaSol,Frontend Engineer,Madrid,,Spain,,https://github.com/dramirez,"React, TypeScript, Vue, CSS"
+,Olivia Brown,olivia.brown@finhive.com,(312) 555-7700,FinHive,Senior Data Engineer,Chicago,IL,USA,https://linkedin.com/in/oliviabrown,,"Python, Apache Spark, Kafka, AWS, SQL"
+,Yuki Tanaka,yuki.tanaka@robonova.jp,+81 3-1234-5678,RoboNova,Robotics Engineer,Tokyo,,Japan,,https://github.com/yukitanaka,"C++, Python, ROS, Linux"
+,Anita Verma,anita.verma@stackline.com,9826551122,Stackline,SDE 2,Pune,Maharashtra,India,https://linkedin.com/in/anitaverma,,"Java, Spring, Microservices, AWS"
+,Liam O'Connor,liam@brewtech.ie,+353 1 555 0150,BrewTech,Platform Engineer,Dublin,,Ireland,,https://github.com/liamoc,"Rust, Kubernetes, Docker, AWS"
+,Jane D.,jane.doe@acme.com,4155552671,Acme Corp,Senior SWE,SF,California,US,,,Python; React; AWS; Terraform
+,Olivia B.,oliviab@gmail.com,(312) 555-7700,,,Chicago,,,,,

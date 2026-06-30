@@ -1,0 +1,3 @@
+Candidate: Anita Verma
+Backend dev with Java and Spring Boot at Stackline. AWS, Microservices, some
+Kubernetes. Reachable at anita.verma@stackline.com. Interested in product roles.

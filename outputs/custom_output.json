@@ -1,0 +1,207 @@
+{
+  "count": 13,
+  "records": [
+    {
+      "full_name": "Jane Doe",
+      "primary_email": "jane.doe@acme.com",
+      "phone": "+14155552671",
+      "country": "US",
+      "headline": "Senior Software Engineer at Acme",
+      "skills": [
+        "AWS",
+        "JavaScript",
+        "Python",
+        "React",
+        "Terraform",
+        "PostgreSQL",
+        "Docker",
+        "Kubernetes",
+        "Node.js",
+        "TypeScript"
+      ],
+      "overall_confidence": 0.706
+    },
+    {
+      "full_name": "John Smith",
+      "primary_email": "john.smith@example.com",
+      "phone": "+919820551234",
+      "country": "IN",
+      "headline": "Staff Engineer",
+      "skills": [
+        "AWS",
+        "Java",
+        "Kubernetes",
+        "Spring Boot",
+        "Spring"
+      ],
+      "overall_confidence": 0.694
+    },
+    {
+      "full_name": "Priya Patel",
+      "primary_email": "priya@datapeak.io",
+      "phone": "+14155550188",
+      "country": "US",
+      "headline": "Data Scientist",
+      "skills": [
+        "pandas",
+        "Python",
+        "scikit-learn",
+        "TensorFlow",
+        "Machine Learning",
+        "PyTorch",
+        "AWS",
+        "NLP",
+        "NumPy",
+        "SQL"
+      ],
+      "overall_confidence": 0.702
+    },
+    {
+      "full_name": "Marcus Lee",
+      "primary_email": "marcus.lee@photonics.com",
+      "phone": "+442079460958",
+      "country": "UK",
+      "headline": "Engineering Manager",
+      "skills": [
+        "GCP",
+        "Go",
+        "Kubernetes",
+        "Terraform"
+      ],
+      "overall_confidence": 0.699
+    },
+    {
+      "full_name": "Sara Khan",
+      "primary_email": "sara.k@mintly.co",
+      "phone": "+12125559821",
+      "country": "US",
+      "headline": "Backend Engineer",
+      "skills": [
+        "GraphQL",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "TypeScript",
+        "AWS",
+        "Docker",
+        "JavaScript",
+        "Kafka",
+        "REST"
+      ],
+      "overall_confidence": 0.665
+    },
+    {
+      "full_name": "Diego Ramirez",
+      "primary_email": "diego@nuevasol.es",
+      "phone": "+34612345678",
+      "country": "ES",
+      "headline": "Frontend Engineer",
+      "skills": [
+        "CSS",
+        "React",
+        "TypeScript",
+        "Vue.js"
+      ],
+      "overall_confidence": 0.621
+    },
+    {
+      "full_name": "Olivia Brown",
+      "primary_email": "olivia.brown@finhive.com",
+      "phone": "+13125557700",
+      "country": "US",
+      "headline": "Senior Data Engineer",
+      "skills": [
+        "Apache Spark",
+        "AWS",
+        "Kafka",
+        "Python",
+        "SQL"
+      ],
+      "overall_confidence": 0.621
+    },
+    {
+      "full_name": "Yuki Tanaka",
+      "primary_email": "yuki.tanaka@robonova.jp",
+      "phone": "+81312345678",
+      "country": "JP",
+      "headline": "Robotics Engineer",
+      "skills": [
+        "C++",
+        "Linux",
+        "Python",
+        "ROS"
+      ],
+      "overall_confidence": 0.621
+    },
+    {
+      "full_name": "Anita Verma",
+      "primary_email": "anita.verma@stackline.com",
+      "phone": "+19826551122",
+      "country": "IN",
+      "headline": "SDE 2",
+      "skills": [
+        "AWS",
+        "Java",
+        "Microservices",
+        "Spring",
+        "Kubernetes"
+      ],
+      "overall_confidence": 0.632
+    },
+    {
+      "full_name": "Liam O'Connor",
+      "primary_email": "liam@brewtech.ie",
+      "phone": "+35315550150",
+      "country": "IE",
+      "headline": "Platform Engineer",
+      "skills": [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "Rust"
+      ],
+      "overall_confidence": 0.621
+    },
+    {
+      "full_name": "Hiroshi Sato",
+      "primary_email": "hiroshi@yamatech.jp",
+      "phone": "+819012345678",
+      "country": "JP",
+      "headline": "ML Engineer",
+      "skills": [
+        "Kubernetes",
+        "NLP",
+        "Python",
+        "PyTorch",
+        "Docker",
+        "GCP",
+        "Machine Learning",
+        "TensorFlow"
+      ],
+      "overall_confidence": 0.691
+    },
+    {
+      "full_name": "Garbage",
+      "primary_email": null,
+      "phone": null,
+      "country": null,
+      "headline": null,
+      "skills": null,
+      "overall_confidence": 0.158
+    },
+    {
+      "full_name": null,
+      "primary_email": null,
+      "phone": null,
+      "country": null,
+      "headline": null,
+      "skills": [
+        "GraphQL",
+        "React",
+        "TypeScript"
+      ],
+      "overall_confidence": 0.042
+    }
+  ],
+  "schema_errors": []
+}

@@ -1,0 +1,17 @@
+Priya Patel
+Mountain View, USA
+priya@datapeak.io | 415 555 0188
+
+Summary
+Data scientist focused on NLP and applied ML.
+
+Experience
+Data Scientist | DataPeak | August 2022 - Present
+ML Intern | Stanford AI Lab | June 2019 - May 2020
+
+Education
+M.S., Statistics - Stanford University - 2020
+B.Sc, Mathematics - University of Pune - 2018
+
+Skills
+Python, pandas, NumPy, scikit-learn, PyTorch, TensorFlow, SQL, AWS, NLP, Machine Learning

@@ -1,0 +1,4 @@
+Name: Marcus Lee
+Engineering manager in London. Strong Go and Kubernetes. Mentioned interest in
+moving to a smaller team. Reach via marcus.lee@photonics.com.
+Notes: deep GCP and Terraform background.

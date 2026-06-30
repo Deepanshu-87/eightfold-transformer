@@ -1,0 +1,4 @@
+# Core pipeline has zero third-party dependencies (stdlib only).
+# Listed here for transparency / future extensions.
+# Optional (not required to run):
+#   reportlab>=4.0       # to regenerate design/*.pdf
