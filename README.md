@@ -15,7 +15,11 @@ config can reshape the output (custom schema) without code changes.
 # Python 3.10+ recommended (no third-party deps required for the core pipeline).
 
 
-# 1) Default canonical schema → outputs/default_output.json
+# Python 3.10+ recommended (no third-party deps required for the core pipeline).
+# Already in the project root after `git clone`.
+# Use `python3` instead of `python` on Linux/macOS if needed.
+
+# 1) Default canonical schema  ->  outputs/default_output.json
 python -m src.cli \
   --csv samples/recruiter.csv \
   --ats samples/ats.json \
@@ -23,7 +27,7 @@ python -m src.cli \
   --notes samples/notes \
   --out outputs/default_output.json
 
-# 2) Custom-config projection → outputs/custom_output.json
+# 2) Custom-config projection  ->  outputs/custom_output.json
 python -m src.cli \
   --csv samples/recruiter.csv \
   --ats samples/ats.json \
@@ -34,6 +38,7 @@ python -m src.cli \
 
 # 3) Tests
 python -m unittest discover -s tests -v
+Key changes:
 ```
 
 Pass any combination of `--csv / --ats / --resumes / --notes`; missing sources
