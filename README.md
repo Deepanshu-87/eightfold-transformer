@@ -1,5 +1,4 @@
-Let me update the README on the server with the latest version and add a download endpoint:
-Action: file_editor create /app/README_FINAL.md --file-text "# Multi-Source Candidate Data Transformer
+# Multi-Source Candidate Data Transformer
 
 > Eightfold Engineering Intern (Jul–Dec 2026) — Assignment
 
@@ -96,16 +95,16 @@ A draft-07 JSON-schema description lives in `src/schema.DEFAULT_SCHEMA`.
 
 ```json
 {
-  \"fields\": [
-    { \"path\": \"full_name\",     \"type\": \"string\",   \"required\": true },
-    { \"path\": \"primary_email\", \"from\": \"emails[0]\", \"type\": \"string\",   \"required\": true },
-    { \"path\": \"phone\",         \"from\": \"phones[0]\", \"type\": \"string\",   \"normalize\": \"E164\" },
-    { \"path\": \"country\",       \"from\": \"location.country\", \"type\": \"string\" },
-    { \"path\": \"skills\",        \"from\": \"skills[].name\",    \"type\": \"string[]\", \"normalize\": \"canonical\" }
+  "fields": [
+    { "path": "full_name",     "type": "string",   "required": true },
+    { "path": "primary_email", "from": "emails[0]", "type": "string",   "required": true },
+    { "path": "phone",         "from": "phones[0]", "type": "string",   "normalize": "E164" },
+    { "path": "country",       "from": "location.country", "type": "string" },
+    { "path": "skills",        "from": "skills[].name",    "type": "string[]", "normalize": "canonical" }
   ],
-  \"include_confidence\": true,
-  \"include_provenance\": false,
-  \"on_missing\": \"null\"
+  "include_confidence": true,
+  "include_provenance": false,
+  "on_missing": "null"
 }
 ```
 
@@ -115,7 +114,7 @@ A draft-07 JSON-schema description lives in `src/schema.DEFAULT_SCHEMA`.
 
 - Same person, different sources, different formats (e.g. `(415) 555-2671` vs `+1-415-555-2671` vs `4155552671`) → merged into one record.
 - Same person, name variations (`Jane Doe` vs `Jane D.`) — matched via shared email/phone.
-- Garbage rows (e.g. country `\"Atlantis\"`, phone `\"abc\"`) — fields drop to `null`, no invented values; confidence scored honestly low.
+- Garbage rows (e.g. country `"Atlantis"`, phone `"abc"`) — fields drop to `null`, no invented values; confidence scored honestly low.
 - Missing source file — warning logged, pipeline continues.
 - Conflicting headline / company between CSV and ATS — source priority decides.
 - Recruiter notes have no email → kept as a separate record (rather than guessing identity).
@@ -161,4 +160,3 @@ A ~2-minute screen recording walks through:
 2. Default output → merged Jane Doe, normalized phones, ISO countries, canonical skills, provenance, confidence.
 3. Custom-config output → same engine, different shape.
 4. One design decision I'm proud of (provenance as a first-class field) and one edge case (garbage source row degrading gracefully).
-"
