@@ -13,7 +13,7 @@ config can reshape the output (custom schema) without code changes.
 
 ```bash
 # Python 3.10+ recommended (no third-party deps required for the core pipeline).
-cd eightfold
+
 
 # 1) Default canonical schema → outputs/default_output.json
 python -m src.cli \
