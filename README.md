@@ -1,4 +1,5 @@
-# Multi-Source Candidate Data Transformer
+Let me update the README on the server with the latest version and add a download endpoint:
+Action: file_editor create /app/README_FINAL.md --file-text "# Multi-Source Candidate Data Transformer
 
 > Eightfold Engineering Intern (Jul–Dec 2026) — Assignment
 
@@ -12,9 +13,6 @@ config can reshape the output (custom schema) without code changes.
 ## Quick start
 
 ```bash
-# Python 3.10+ recommended (no third-party deps required for the core pipeline).
-
-
 # Python 3.10+ recommended (no third-party deps required for the core pipeline).
 # Already in the project root after `git clone`.
 # Use `python3` instead of `python` on Linux/macOS if needed.
@@ -38,7 +36,6 @@ python -m src.cli \
 
 # 3) Tests
 python -m unittest discover -s tests -v
-Key changes:
 ```
 
 Pass any combination of `--csv / --ats / --resumes / --notes`; missing sources
@@ -50,26 +47,13 @@ are skipped gracefully. Use `--strict` to fail on schema-validation errors.
 
 `detect → extract → normalize → merge → confidence → project-to-output → validate`
 
-1. **detect** — `src/pipeline.detect_and_extract` figures out which sources to
-   run from CLI flags; missing/malformed sources are skipped (never crash).
-2. **extract** — one module per source (`src/extract/*.py`) produces *partial*
-   canonical profiles. Extractors never invent data: missing fields stay
-   `null` / `[]`.
-3. **normalize** — `src/normalize.py` canonicalizes phones (E.164), dates
-   (`YYYY-MM`), country (ISO-3166 α-2), skills (`js → JavaScript`, `k8s →
-   Kubernetes`, …), and emails (lowercased + regex-validated).
-4. **merge** — `src/merge.py` runs union-find identity resolution over
-   normalized email, phone, and name. Scalars are picked by **source
-   priority**; lists are unioned & deduped; skills are merged with
-   diminishing-returns confidence boosting.
-5. **confidence** — `src/confidence.py` computes per-field scores from source
-   priority + corroboration, then a weighted `overall_confidence` in `[0, 1]`.
-6. **project-to-output** — `src/project.py` takes a runtime config and reshapes
-   the canonical record (subset, rename via `from`, per-field normalization,
-   missing handling). The internal canonical record is never mutated.
-7. **validate** — `src/validate.py` checks the produced record against the
-   canonical JSON schema (or the projected shape). Errors are reported, not
-   fabricated.
+1. **detect** — `src/pipeline.detect_and_extract` figures out which sources to run from CLI flags; missing/malformed sources are skipped (never crash).
+2. **extract** — one module per source (`src/extract/*.py`) produces *partial* canonical profiles. Extractors never invent data: missing fields stay `null` / `[]`.
+3. **normalize** — `src/normalize.py` canonicalizes phones (E.164), dates (`YYYY-MM`), country (ISO-3166 α-2), skills (`js → JavaScript`, `k8s → Kubernetes`, …), and emails (lowercased + regex-validated).
+4. **merge** — `src/merge.py` runs union-find identity resolution over normalized email, phone, and name. Scalars are picked by **source priority**; lists are unioned & deduped; skills are merged with diminishing-returns confidence boosting.
+5. **confidence** — `src/confidence.py` computes per-field scores from source priority + corroboration, then a coverage-weighted `overall_confidence` in `[0, 1]`. Sparse records score honestly low.
+6. **project-to-output** — `src/project.py` takes a runtime config and reshapes the canonical record (subset, rename via `from`, per-field normalization, missing handling). The internal canonical record is never mutated.
+7. **validate** — `src/validate.py` checks the produced record against the canonical JSON schema (or the projected shape). Errors are reported, not fabricated.
 
 ## Sources
 
@@ -112,52 +96,43 @@ A draft-07 JSON-schema description lives in `src/schema.DEFAULT_SCHEMA`.
 
 ```json
 {
-  "fields": [
-    { "path": "full_name",     "type": "string",   "required": true },
-    { "path": "primary_email", "from": "emails[0]", "type": "string",   "required": true },
-    { "path": "phone",         "from": "phones[0]", "type": "string",   "normalize": "E164" },
-    { "path": "country",       "from": "location.country", "type": "string" },
-    { "path": "skills",        "from": "skills[].name",    "type": "string[]", "normalize": "canonical" }
+  \"fields\": [
+    { \"path\": \"full_name\",     \"type\": \"string\",   \"required\": true },
+    { \"path\": \"primary_email\", \"from\": \"emails[0]\", \"type\": \"string\",   \"required\": true },
+    { \"path\": \"phone\",         \"from\": \"phones[0]\", \"type\": \"string\",   \"normalize\": \"E164\" },
+    { \"path\": \"country\",       \"from\": \"location.country\", \"type\": \"string\" },
+    { \"path\": \"skills\",        \"from\": \"skills[].name\",    \"type\": \"string[]\", \"normalize\": \"canonical\" }
   ],
-  "include_confidence": true,
-  "include_provenance": false,
-  "on_missing": "null"
+  \"include_confidence\": true,
+  \"include_provenance\": false,
+  \"on_missing\": \"null\"
 }
 ```
 
-`from` supports dotted paths, `[N]` indexing, and `[]` list-flattening. The
-projection layer is the **only** place where the output shape changes — the
-internal canonical record is unchanged. Missing-value behaviour is configurable
-(`null` / `omit` / `error`).
+`from` supports dotted paths, `[N]` indexing, and `[]` list-flattening. The projection layer is the **only** place where the output shape changes — the internal canonical record is unchanged. Missing-value behaviour is configurable (`null` / `omit` / `error`).
 
 ## Edge cases handled
 
-- Same person, different sources, different formats (e.g. `(415) 555-2671` vs
-  `+1-415-555-2671` vs `4155552671`) → merged into one record.
-- Same person, name variations (`Jane Doe` vs `Jane D.`) — matched via shared
-  email/phone.
-- Garbage rows (e.g. country `"Atlantis"`, phone `"abc"`) — fields drop to
-  `null`, no invented values.
+- Same person, different sources, different formats (e.g. `(415) 555-2671` vs `+1-415-555-2671` vs `4155552671`) → merged into one record.
+- Same person, name variations (`Jane Doe` vs `Jane D.`) — matched via shared email/phone.
+- Garbage rows (e.g. country `\"Atlantis\"`, phone `\"abc\"`) — fields drop to `null`, no invented values; confidence scored honestly low.
 - Missing source file — warning logged, pipeline continues.
 - Conflicting headline / company between CSV and ATS — source priority decides.
-- Recruiter notes have no email → kept as a separate record (rather than
-  guessing identity).
+- Recruiter notes have no email → kept as a separate record (rather than guessing identity).
 
 ## Deliberately descoped (time budget)
 
-- Live GitHub / LinkedIn fetching (would require network + rate-limit handling;
-  the source modules are stubbed-ready).
+- Live GitHub / LinkedIn fetching (would require network + rate-limit handling; the source modules are stubbed-ready).
 - PDF / DOCX → text conversion (resumes are pre-extracted `.txt`).
-- Fuzzy name matching (currently exact normalized match). Trade-off: avoids
-  false merges; safer for hiring decisions.
+- Fuzzy name matching (currently exact normalized match). Trade-off: avoids false merges; safer for hiring decisions.
 
 ## Repo layout
 
 ```
-eightfold/
+.
 ├── src/
 │   ├── cli.py              # argparse entrypoint
-│   ├── pipeline.py         # detect → extract → … → validate
+│   ├── pipeline.py         # detect -> extract -> ... -> validate
 │   ├── schema.py           # canonical schema + JSON-Schema
 │   ├── normalize.py        # phones / dates / country / skills / email
 │   ├── merge.py            # identity resolution + conflict policy
@@ -174,6 +149,8 @@ eightfold/
 ├── outputs/                # produced JSON outputs (checked in for review)
 ├── tests/test_pipeline.py  # 14 unit + integration tests
 ├── design/                 # one-page Stage-1 design PDF
+├── requirements.txt
+├── .gitignore
 └── README.md
 ```
 
@@ -181,8 +158,7 @@ eightfold/
 
 A ~2-minute screen recording walks through:
 1. Running the pipeline end-to-end on `samples/`.
-2. Default output → merged Jane Doe, normalized phones, ISO countries, canonical
-   skills, provenance, confidence.
+2. Default output → merged Jane Doe, normalized phones, ISO countries, canonical skills, provenance, confidence.
 3. Custom-config output → same engine, different shape.
-4. One design decision I'm proud of (provenance as a first-class field) and
-   one edge case (garbage source row degrading gracefully).
+4. One design decision I'm proud of (provenance as a first-class field) and one edge case (garbage source row degrading gracefully).
+"
